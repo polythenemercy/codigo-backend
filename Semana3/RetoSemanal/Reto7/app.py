@@ -26,7 +26,7 @@ class DatainfoSchema(ma.Schema):
   class Meta:
     fields = ["IdReg", "DataValue"]
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def list_data():
   dataset = Datainfo.query.all()
   schema = DatainfoSchema()
