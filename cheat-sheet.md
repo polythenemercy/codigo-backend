@@ -22,10 +22,15 @@
 
 6- Registrar 'app' en proyecto_nombre/settings.py en arreglo "INSTALLED_APPS"
 
-7- Definir modelo en 'env'/models.py, crear clase y definir atributos y tipo de datos del modelo
+7- Definir modelo en 'app'/models.py, crear clase y definir atributos y tipo de datos del modelo
 
 8- Realizar migración 
 -> python manage.py makemigrations
 
 9- Ejecutar migración 
 -> python manage.py migrate
+
+project/settings.py -> Se define la aplicación
+app/models.py       -> Se define el modelo
+app/views.py        -> Se definen las vistas
+project/urls.py     -> Se definen las rutas
