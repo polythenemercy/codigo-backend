@@ -15,7 +15,12 @@ db = SQLAlchemy(app)
 #Procedimiento - Importar referencias:
 from models import Datainfo
 
-@app.route('/dataset')
-def get_data():
+@app.route('/data')
+def get_dataset():
   dataset = Datainfo.query.all()
   return render_template("index.html", dataset = dataset)
+
+@app.route('/data/<id>')
+def get_data(id):
+  data = Datainfo.query.filter_by(IdReg = id).first()
+  return render_template("search.html", data = data)  
